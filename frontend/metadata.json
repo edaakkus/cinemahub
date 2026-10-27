@@ -1,0 +1,6 @@
+{
+  "name": "Cinema Hub Mobile",
+  "description": "Spring Boot REST API projesi ile tam uyumlu, modern sinema bilet alma mobil uygulaması arayüzü.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
