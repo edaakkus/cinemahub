@@ -26,11 +26,11 @@ public class DataInitializer implements CommandLineRunner {
     private final PasswordEncoder passwordEncoder;
 
     public DataInitializer(UserRepository userRepository,
-                           MovieRepository movieRepository,
-                           HallRepository hallRepository,
-                           SeatRepository seatRepository,
-                           ShowTimeRepository showTimeRepository,
-                           PasswordEncoder passwordEncoder) {
+            MovieRepository movieRepository,
+            HallRepository hallRepository,
+            SeatRepository seatRepository,
+            ShowTimeRepository showTimeRepository,
+            PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.movieRepository = movieRepository;
         this.hallRepository = hallRepository;
@@ -54,8 +54,7 @@ public class DataInitializer implements CommandLineRunner {
                     "admin",
                     "admin@cinemahub.com",
                     passwordEncoder.encode("admin123"),
-                    Role.ADMIN
-            );
+                    Role.ADMIN);
             userRepository.save(admin);
             logger.info("Admin kullanıcısı oluşturuldu: admin / admin123");
         }
@@ -65,8 +64,7 @@ public class DataInitializer implements CommandLineRunner {
                     "eda",
                     "eda@cinemahub.com",
                     passwordEncoder.encode("123456"),
-                    Role.USER
-            );
+                    Role.USER);
             userRepository.save(eda);
             logger.info("Demo kullanıcısı oluşturuldu: eda / 123456");
         }
@@ -124,8 +122,7 @@ public class DataInitializer implements CommandLineRunner {
                             8.6,
                             "Denis Villeneuve",
                             "13+",
-                            "https://www.youtube.com/watch?v=Way9Dexny3w"
-                    ),
+                            "https://www.youtube.com/watch?v=Way9Dexny3w"),
                     new Movie(
                             "Oppenheimer",
                             "Dram",
@@ -137,8 +134,7 @@ public class DataInitializer implements CommandLineRunner {
                             8.9,
                             "Christopher Nolan",
                             "16+",
-                            "https://www.youtube.com/watch?v=uYPbbksJxIg"
-                    ),
+                            "https://www.youtube.com/watch?v=uYPbbksJxIg"),
                     new Movie(
                             "Spider-Man: Örümcek Evrenine Geçiş",
                             "Animasyon",
@@ -150,8 +146,7 @@ public class DataInitializer implements CommandLineRunner {
                             8.7,
                             "Joaquim Dos Santos",
                             "Genel İzleyici",
-                            "https://www.youtube.com/watch?v=cqGjhVJWtEg"
-                    ),
+                            "https://www.youtube.com/watch?v=cqGjhVJWtEg"),
                     new Movie(
                             "Interstellar",
                             "Bilim Kurgu",
@@ -163,8 +158,7 @@ public class DataInitializer implements CommandLineRunner {
                             8.7,
                             "Christopher Nolan",
                             "Genel İzleyici",
-                            "https://www.youtube.com/watch?v=zSWdZVtXT7E"
-                    ),
+                            "https://www.youtube.com/watch?v=zSWdZVtXT7E"),
                     new Movie(
                             "Gladyatör II",
                             "Aksiyon",
@@ -176,9 +170,7 @@ public class DataInitializer implements CommandLineRunner {
                             7.2,
                             "Ridley Scott",
                             "16+",
-                            "https://www.youtube.com/watch?v=4rgYUipGJNo"
-                    )
-            );
+                            "https://www.youtube.com/watch?v=4rgYUipGJNo"));
             List<Movie> saved = movieRepository.saveAll(list);
             logger.info("Popüler filmler veritabanına eklendi.");
             return saved;
@@ -197,27 +189,23 @@ public class DataInitializer implements CommandLineRunner {
                         movie,
                         hall,
                         now.withHour(14).withMinute(30).withSecond(0),
-                        new BigDecimal("220.00")
-                ));
+                        new BigDecimal("220.00")));
                 showTimes.add(new ShowTime(
                         movie,
                         hall,
                         now.withHour(19).withMinute(0).withSecond(0),
-                        new BigDecimal("250.00")
-                ));
+                        new BigDecimal("250.00")));
                 // Yarın için 2 seans
                 showTimes.add(new ShowTime(
                         movie,
                         hall,
                         now.plusDays(1).withHour(16).withMinute(0).withSecond(0),
-                        new BigDecimal("220.00")
-                ));
+                        new BigDecimal("220.00")));
                 showTimes.add(new ShowTime(
                         movie,
                         hall,
                         now.plusDays(1).withHour(21).withMinute(15).withSecond(0),
-                        new BigDecimal("250.00")
-                ));
+                        new BigDecimal("250.00")));
             }
             showTimeRepository.saveAll(showTimes);
             logger.info("Örnek seanslar veritabanına eklendi.");
