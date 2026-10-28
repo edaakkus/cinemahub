@@ -177,5 +177,5 @@ The frontend UI was prototyped with **Google AI Studio**. I designed and impleme
 
 ## 👩‍💻 Author
 
-**Eda Akkuş**
+**Eda Akkuş**  
 GitHub: [@edaakkus](https://github.com/edaakkus)
