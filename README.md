@@ -16,9 +16,9 @@ CinemaHub lets users browse now-showing and upcoming movies, pick showtimes, cho
 
 ## 📸 Screenshots
 
-| My Tickets | QR Ticket | Backend Integration Settings |
-|:---:|:---:|:---:|
-| ![Movie Catalog](docs/screenshots/movies.png) | ![My Tickets](docs/screenshots/my-tickets.png) | ![QR Ticket](docs/screenshots/ticket-qr.png) | ![API Settings](docs/screenshots/api-settings.png) |
+| Movie Catalog | My Tickets | Digital QR Ticket | Backend Integration |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/screenshots/movies.png" width="220" /> | <img src="docs/screenshots/my-tickets.png" width="220" /> | <img src="docs/screenshots/ticket-qr.png" width="220" /> | <img src="docs/screenshots/api-settings.png" width="220" /> |
 
 ---
 
